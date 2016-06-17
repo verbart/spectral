@@ -11,12 +11,6 @@ screen-sm = 768px
 
 screen-xs = 480px
 
-clearfix()
-  &:after
-    content ''
-    display block
-    clear both
-  
 container-fixed()
   padding-left (gutter/2)
   padding-right (gutter/2)
@@ -34,7 +28,6 @@ colomns()
   for i in (1..colnum)
     .col-lg-{i}, .col-md-{i}, .col-sm-{i}, .col-xs-{i}
       @extend $cont
-colomns()
 
 
 
@@ -43,6 +36,7 @@ grid(colnum=12, display, gutter)
     .col-{display}-{num}
       width floor((100/colnum)* num+'%',4)
 
+colomns()
 
 .container
   clearfix()
@@ -59,8 +53,8 @@ grid(colnum=12, display, gutter)
 
 .row
   clearfix()
-  margin-left: - floor(gutter/2); 
-  margin-right: - floor(gutter/2);
+  margin-left floor(gutter/-2)
+  margin-right floor(gutter/-2)
 
 @media (min-width screen-lg)
   grid(colnum,'lg',gutter)

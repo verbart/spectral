@@ -2,6 +2,11 @@
 	background-color #505393
 	text-align center
 	color white
+	h2
+			font-size 27px
+			letter-spacing 4px
+			line-height 32px
+			padding 100px 0 10px
 .headline 
 	text-transform uppercase
 	padding-top 30px
@@ -11,10 +16,31 @@
 	border 1px solid #464981
 	width 40%
 .description
-	font-size 24px
+	font-size 20px
+	letter-spacing 1px
+	line-height 32px
 .features
 	padding 40px 0 120px
-	.features__item 
+	&__item 
 		padding 0px 120px
+		padding-bottom 70px
 		text-align left
-		background-color red
+		h2
+			font-size 24px
+			letter-spacing 4px
+			line-height 32px
+			padding 80px 0 10px
+			position relative
+			i
+				position absolute
+				left -60px
+				display inline-block
+				font-size 32px
+				color #06F0C6
+				
+.portfolio__description
+	padding 0px 150px
+	line-height 38px
+for num in (1..6)
+	.features__item:nth-child({num})
+		background rgba(black, num/29)
