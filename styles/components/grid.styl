@@ -1,0 +1,69 @@
+colnum = 12
+
+gutter = 30px
+
+//screen size breakpoints
+screen-lg = 1200px
+
+screen-md = 992px
+
+screen-sm = 768px
+
+screen-xs = 480px
+
+container-fixed()
+  padding-left (gutter/2)
+  padding-right (gutter/2)
+  margin-right auto
+  margin-left auto
+
+$cont
+  padding-left floor((gutter/2),2)
+  padding-right floor((gutter/2),2)
+  float left
+  box-sizing border-box
+  display block
+
+colomns()
+  for i in (1..colnum)
+    .col-lg-{i}, .col-md-{i}, .col-sm-{i}, .col-xs-{i}
+      @extend $cont
+
+
+
+grid(colnum=12, display, gutter)
+  for num in (1..colnum)
+    .col-{display}-{num}
+      width floor((100/colnum)* num+'%',4)
+
+colomns()
+
+.container
+  clearfix()
+  container-fixed()
+  @media (min-width screen-sm)
+    width screen-sm + gutter
+  @media (min-width screen-md)
+    width screen-md + gutter
+  @media (min-width screen-lg)
+    width screen-lg + gutter
+
+.container-fluid
+  container-fixed()
+
+.row
+  clearfix()
+  margin-left -floor(gutter/2)
+  margin-right -floor(gutter/2)
+
+@media (min-width screen-lg)
+  grid(colnum,'lg',gutter)
+
+@media (min-width screen-sm) and (max-width screen-md)
+  grid(colnum, 'md', gutter)
+
+@media (min-width screen-xs) and (max-width screen-sm)
+  grid(colnum, 'sm', gutter)
+
+@media (max-width screen-xs )
+  grid(colnum, 'xs', gutter)
