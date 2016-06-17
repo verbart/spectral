@@ -12,6 +12,13 @@
 .link_dotted {
   border-bottom: 1px dotted #fff;
 }
+.link_transparent {
+  color: rgba(255,255,255,0.5);
+  border-bottom: 1px dotted rgba(255,255,255,0.5);
+}
+.link_transparent:hover {
+  color: #fff;
+}
 .link:hover {
   border: rgba(255,255,255,0);
 }
@@ -330,8 +337,7 @@ body {
 }
 footer {
   background-color: rgba(29,36,42,0.9);
-  padding: 70px;
-  min-width: 120px;
+  padding: 104px 0 79px;
 }
 .icons,
 .copyrights {
@@ -339,9 +345,10 @@ footer {
   text-align: center;
   color: rgba(255,255,255,0.5);
   font-size: 25px;
+  margin: 0 0 40px;
 }
 .icon {
-  margin: 10px;
+  margin: 8px;
   display: inline-block;
   color: rgba(255,255,255,0.5);
 }
@@ -350,9 +357,16 @@ footer {
 }
 .copyrights {
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 20px;
+  letter-spacing: 3px;
+  font-size: 18px;
+  font-weight: 400;
 }
 .copyright {
   display: inline-block;
+  border-right: 1px solid rgba(255,255,255,0.5);
+  line-height: 16px;
+  padding: 0 20px;
+}
+.copyright:last-child {
+  border-right: none;
 }
