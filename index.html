@@ -2,15 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css">
   <title>Spectral</title>
 </head>
 <body>
-  <section class="banner">
-    <div class="menu">
-      <input type="checkbox" name="menuView" class="menuBtn">
+  <div class="menu">
+    <label for="menuView">Menu
+    <i class="fa fa-bars" aria-hidden="true"></i></label>
+    <input type="checkbox" id="menuView" name="menuView" class="menuBtn">
+    <div class="sidebar">
+      <label for="menuView">
+      <i class="fa fa-times fa-2x cross" aria-hidden="true"></i></label>
+      <input type="checkbox" id="menuView" name="menuView" class="menuBtn">
+      <ul class="sidebar__list">
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">home</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">generic</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">elements</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">sign up</a>
+        </li>
+        <li class="sidebar__item">
+          <a href="#" class="sidebar__link">log in</a>
+        </li>
+      </ul>
     </div>
+  </div>
+
+  <section class="banner">
+    <h1 class="banner__head">
+      spectral
+    </h1>
+    <p class="banner__info">
+      another fine responsive site template freebie crafted by <a href="#" class="link link_white link_dotted">html5 up</a>
+    </p>
+    <button class="banner__button">
+      activate
+    </button>
+    <a href="#" class="banner__learnMore">
+      learn more
+      <br>
+      <i class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
+    </a>
   </section>
 
   <section class="service">
@@ -24,52 +63,108 @@
   <section class="portfolio">
     <div class="container">
       <div class="row">
-        <h2 class="headline">Accumsan mus tortor nunc aliquet</h2>
-        <hr class="line">
-        <p class="description">Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
-        fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+       <div class="col-lg-12">
+         <h2 class="headline">Accumsan mus tortor nunc aliquet</h2>
+         <hr class="line">
+         <p class="description">Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
+         fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+       </div>
       </div>
-      <!-- <div class="features"> -->
-      <div class="row">
-        <div class="col-lg-6 features__item">
-          <h2 class="headline">Arcu accumsan</h2>
-          <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+      <div class="features">
+        <div class="row">
+          <div class="col-lg-6 features__item">
+            <h2 class="headline">Arcu accumsan</h2>
+            <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+          </div>
+          <div class="col-lg-6 features__item">
+            <h2 class="headline">Arcu accumsan</h2>
+            <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+          </div>
         </div>
-        <div class="col-lg-6 features__item">
-          <h2 class="headline">Arcu accumsan</h2>
-          <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+        <div class="row">
+          <div class="col-lg-6 features__item">
+            <h2 class="headline">Arcu accumsan</h2>
+            <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+          </div>
+          <div class="col-lg-6 features__item">
+           <h2 class="headline">Arcu accumsan</h2>
+            <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 features__item">
+            <h2 class="headline">Arcu accumsan</h2>
+            <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+          </div>
+          <div class="col-lg-6 features__item">
+            <h2 class="headline">Arcu accumsan</h2>
+            <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-6 features__item">
-          <h2 class="headline">Arcu accumsan</h2>
-          <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </div>
-        <div class="col-lg-6 features__item">
-         <h2 class="headline">Arcu accumsan</h2>
-          <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 features__item">
-          <h2 class="headline">Arcu accumsan</h2>
-          <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </div>
-        <div class="col-lg-6 features__item">
-          <h2 class="headline">Arcu accumsan</h2>
-          <p class="description">Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </div>
-      </div>
-      <!-- </div> -->
     </div>
   </section>
 
   <section class="interactive">
-    
+    <div class="interactive_banner">
+      <div class="interactive_container">
+        <div class="interactive_text">
+          <h2>Arcue ut vel commodo</h2>
+          <p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+        </div>
+        <div class="interactive_links">
+          <ul class="interactive_buttons">
+            <li class="button_red"><a href="#">Activate</a></li>
+            <li class="button_transparent">Learn more<a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer class="mainFooter">
-    
+    <div class="container">
+      <ul class="icons">
+        <li class="icon">
+          <a href="#">
+            <i class="fa icon fa-twitter" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="#">
+            <i class="fa icon fa-facebook" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="#">
+            <i class="fa icon fa-instagram" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="#">
+            <i class="fa icon fa-dribbble" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li class="icon">
+          <a href="#">
+            <i class="fa icon fa-envelope" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="copyrights">
+        <ul class="footer_copyrights">
+          <li class="copyright">
+          © untitled</li>
+          <li class="copyright">
+            Design : <a class="link link_transparent" href="#">html5 up</a>
+          </li>
+          <li class="copyright">
+            Demo images: 
+            <a class="link link_transparent" href="#"> Unsplash</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </body>
 </html>

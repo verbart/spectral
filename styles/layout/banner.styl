@@ -1,0 +1,79 @@
+.banner
+  text-transform uppercase
+  text-align center
+  padding 15% 38% 40px
+  color #fff
+  background-color rgba(0,0,0,.4)
+
+.banner__head
+  display inline-block
+  font-size 2.5rem
+  border-top 2px solid #fff
+  border-bottom 2px solid #fff
+  padding 1rem 0
+
+.banner__button
+  text-transform uppercase
+  margin-top 2rem
+  font-size 1.1rem
+  color #fff
+  padding 1rem 2rem
+  background #ed4933
+  border none
+  border-radius 10px
+  &:hover
+    background lighten(@background, 20%)
+
+.banner__learnMore
+  display block
+  margin-top 13rem
+  text-decoration none
+  color #fff
+
+.menu
+  text-transform uppercase
+  position fixed
+  color #fff
+  right 15px
+  top 10px
+  bottom 0
+  z-index 1000
+  display block
+  overflow-x hidden
+  overflow-y auto
+  box-sizing: border-box;
+
+.menuBtn
+  display none
+
+.cross
+  position absolute
+  top 0
+  right 10px
+
+.sidebar
+  background #21B2A6;
+  right 0
+  top 0
+  bottom 0
+  position fixed
+  width 20%
+  display none
+
+.sidebar__list
+  list-style none
+
+.sidebar__link
+  text-transform uppercase
+  text-decoration none
+  color #fff
+
+.sidebar__item
+  padding 1rem 0
+  border-bottom 1px dotted black
+
+.sidebar__item:last-child
+  border-bottom none
+
+.menuBtn:checked + .sidebar
+  display block
