@@ -492,7 +492,7 @@ footer {
 .copyrights {
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
 }
 .copyright {
@@ -511,7 +511,7 @@ footer {
 }
 .interactive_banner {
   background-color: rgba(0,0,0,0.4);
-  padding: 100px 0 80px;
+  padding: 100px 0 125px;
 }
 .interactive_container {
   max-width: 900px;
@@ -526,5 +526,7 @@ footer {
   float: left;
   width: 65%;
   padding: 10px;
-  line-height: 25px;
+}
+.interactive_text {
+  line-height: 35px;
 }
