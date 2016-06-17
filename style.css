@@ -312,21 +312,30 @@ body {
   position: fixed;
   color: #fff;
   right: 15px;
-  top: 0;
+  top: 10px;
   bottom: 0;
   z-index: 1000;
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 .menuBtn {
   display: none;
 }
+.cross {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
 .sidebar {
   background: #21b2a6;
   right: 0;
+  top: 0;
+  bottom: 0;
   position: fixed;
   width: 20%;
+  display: none;
 }
 .sidebar__list {
   list-style: none;
@@ -336,8 +345,15 @@ body {
   text-decoration: none;
   color: #fff;
 }
+.sidebar__item {
+  padding: 1rem 0;
+  border-bottom: 1px dotted #000;
+}
+.sidebar__item:last-child {
+  border-bottom: none;
+}
 .menuBtn:checked + .sidebar {
-  display: none;
+  display: block;
 }
 footer {
   background-color: rgba(29,36,42,0.9);
