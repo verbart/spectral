@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic");
+.link {
+  text-decoration: none;
+  transition: 0.5s;
+}
+.link_white {
+  color: #fff;
+}
+.link_grey {
+  color: #808080;
+}
+.link_dotted {
+  border-bottom: 1px dotted #fff;
+}
+.link:hover {
+  border: rgba(255,255,255,0);
+}
 .col-lg-1,
 .col-md-1,
 .col-sm-1,
@@ -239,6 +255,7 @@
 body {
   margin: 0;
   font: 16px 'Source Sans Pro', sans-serif;
+  background: url("./images/banner.jpg");
 }
 .banner {
   text-transform: uppercase;
@@ -254,17 +271,18 @@ body {
   border-bottom: 2px solid #fff;
   padding: 1rem 0;
 }
-.banner__info a {
+.link__dotted {
   text-decoration: none;
   color: #fff;
   border-bottom: 1px dotted #fff;
   transition: 0.5s;
-  padding: 1rem 0;
 }
-.banner__info a:hover {
+.link__dotted:hover {
   border: rgba(255,255,255,0);
 }
 .banner__button {
+  text-transform: uppercase;
+  margin-top: 2rem;
   font-size: 1.5rem;
   color: #fff;
   padding: 1rem 2rem;
