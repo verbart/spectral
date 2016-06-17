@@ -29,10 +29,65 @@
   margin-top 13rem
   text-decoration none
   color #fff
-// .menu
-//   text-transform uppercase
 
-// .menu
-//   position fixed
-//   right 0
-//   top 0
+.menu
+  text-transform uppercase
+  position fixed
+  color #fff
+  right 15px
+  top 0
+  bottom 0
+  z-index 1000
+  display block
+  overflow-x hidden
+  overflow-y auto
+
+
+
+  // left: 0;
+  // z-index: 1000;
+  // display: block;
+  // padding: 20px;
+  // overflow-x: hidden;
+  // overflow-y: auto;
+  // background-color: #f5f5f5;
+  // border-right: 1px solid #eee;
+
+.menuBtn
+  display none
+
+.sidebar
+  background #21B2A6;
+  right 0;
+  position: fixed
+  width 20%;
+
+.sidebar__list
+  list-style none
+
+.sidebar__link
+  text-transform uppercase
+  text-decoration none
+  color #fff
+
+// .sidebar__item:not:(last-child)
+//   padding 1rem 0
+//   border-bottom 1px dotted black
+
+.menuBtn:checked + .sidebar
+  // right: 50%;
+  display none
+
+
+
+
+
+// nav {
+// position: relative;
+// }
+
+// .dopmenu {
+// position: absolute;
+// top: 0;
+// right: -99999px;
+// }
