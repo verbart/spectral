@@ -351,6 +351,16 @@ body {
 .menuBtn:checked + .sidebar {
   display: block;
 }
+.menuBtn:checked + .darkbg {
+  background-color: rgba(0,0,0,0.8);
+}
+.darkbg {
+  width: 80%;
+  hight: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
 footer {
   background-color: rgba(29,36,42,0.9);
   padding: 104px 0 79px;
