@@ -1,1 +1,1 @@
-# spectral
+# Spectral
