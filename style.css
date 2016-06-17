@@ -321,9 +321,13 @@ footer {
 }
 .copyrights {
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 20px;
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 300;
 }
 .copyright {
   display: inline-block;
+  border-right: 1px solid rgba(255,255,255,0.5);
+  line-height: 16px;
+  padding: 0 20px;
 }
