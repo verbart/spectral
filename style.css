@@ -314,10 +314,16 @@ h2 {
   border: 2px solid #fff;
   text-decoration: none;
 }
+h2 {
+  margin: 0;
+}
 .service {
   background: #21b2a6;
   color: #fff;
   text-align: center;
+}
+.service .container {
+  max-width: 740px;
 }
 .service__title {
   border-bottom: 2px solid #1d9c91;
@@ -325,6 +331,9 @@ h2 {
   font-size: 24px;
   line-height: 42px;
   text-transform: uppercase;
+}
+.service__info {
+  font-size: 20px;
 }
 .square {
   font-size: 30px;
@@ -348,42 +357,38 @@ h2 {
 .service__shape {
   padding-bottom: 4rem;
 }
-.about__context {
-  background: #2b343d;
+.about {
   color: #fff;
-}
-.about__img {
-  height: 29.38rem;
-  width: 41.75rem;
-  float: left;
 }
 .about__img_1 {
   background: url("./images/about_1.jpg") center/cover no-repeat;
+  height: 474px;
 }
-.about__context:after {
-  content: '';
-  clear: both;
-  display: table;
+.about__info_1 {
+  background: #2b343d;
+  height: 474px;
 }
-.about__info {
-  padding: 7rem 20rem 2.5rem 46rem;
-  letter-spacing: 4px;
-  line-height: 32px;
-}
-.about__title {
-  font-size: 28px;
-}
-.about__text {
-  font-size: 18px;
+.about__context {
+  padding: 160px 300px 0 40px;
 }
 .about__img_2 {
   background: url("./images/about_2.jpg") center/cover no-repeat;
+  height: 474px;
+}
+.about__info_2 {
+  background: #273038;
+  height: 474px;
+}
+.about__context__center {
+  padding: 150px 150px 0 240px;
 }
 .about__img_3 {
   background: url("./images/about_3.jpg") center/cover no-repeat;
+  height: 474px;
 }
-.img__right {
-  float: right;
+.about__info_3 {
+  background: #273038;
+  height: 474px;
 }
 .banner {
   text-transform: uppercase;
