@@ -1,6 +1,7 @@
 footer {
   background-color: rgba(29,36,42,0.9);
   padding: 70px;
+  min-width: 120px;
 }
 .icons {
   display: block;
