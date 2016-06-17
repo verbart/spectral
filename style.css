@@ -1,11 +1,30 @@
-<<<<<<< HEAD
 html {
   font: 16px 'Source Sans Pro', sans-serif;
+}
+.button_red {
+  display: inline-block;
+  background-color: #ed4933;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 3px;
 }
 body {
   margin: 0;
   background: url("./images/banner.jpg");
-=======
+  background: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/banner.jpg");
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0;
+}
+h2 {
+  font-size: 35px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.75em;
+}
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic");
 .link {
@@ -30,7 +49,9 @@ body {
 }
 .link:hover {
   border: rgba(255,255,255,0);
->>>>>>> 502378bbd4fb5141e6b416bd3b28d50873876862
+}
+.fa-rotate-45 {
+  transform: rotate(45deg);
 }
 .col-lg-1,
 .col-md-1,
@@ -294,34 +315,6 @@ body {
 .interactive_text {
   float: left;
 }
-.button_red {
-  display: inline-block;
-  background-color: #ed4933;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 3px;
-}
-body {
-  margin: 0;
-  font: 16px 'Source Sans Pro', sans-serif;
-  background: url("./images/banner.jpg");
-  background: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/banner.jpg");
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top: 0;
-}
-h2 {
-  font-size: 35px;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.75em;
-}
-.fa-rotate-45 {
-  transform: rotate(45deg);
-}
 .service {
   background: #21b2a6;
   color: #fff;
@@ -344,7 +337,6 @@ h2 {
   display: inline-block;
   margin: 26px;
 }
-<<<<<<< HEAD
 .icon_green {
   color: #0fc;
 }
@@ -356,26 +348,11 @@ h2 {
 }
 .service__shape {
   padding-bottom: 4rem;
-=======
-.banner__button {
-  text-transform: uppercase;
-  margin-top: 2rem;
-  font-size: 1.1rem;
-  color: #fff;
-  padding: 1rem 2rem;
-  background: #ed4933;
-  border: none;
-  border-radius: 10px;
-}
-.banner__button:hover {
-  background: #f16d5c;
->>>>>>> 502378bbd4fb5141e6b416bd3b28d50873876862
 }
 .about__context {
   background: #2b343d;
   color: #fff;
 }
-<<<<<<< HEAD
 .about__img {
   height: 29.38rem;
   width: 41.75rem;
@@ -408,7 +385,40 @@ h2 {
 }
 .img__right {
   float: right;
-=======
+}
+.banner {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15% 38% 40px;
+  color: #fff;
+  background-color: rgba(0,0,0,0.4);
+}
+.banner__head {
+  display: inline-block;
+  font-size: 2.5rem;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  padding: 1rem 0;
+}
+.banner__button {
+  text-transform: uppercase;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  background: #ed4933;
+  border: none;
+  border-radius: 10px;
+}
+.banner__button:hover {
+  background: #f16d5c;
+}
+.banner__learnMore {
+  display: block;
+  margin-top: 13rem;
+  text-decoration: none;
+  color: #fff;
+}
 .menu {
   text-transform: uppercase;
   position: fixed;
@@ -491,5 +501,4 @@ footer {
 }
 .copyright:last-child {
   border-right: none;
->>>>>>> 502378bbd4fb5141e6b416bd3b28d50873876862
 }
