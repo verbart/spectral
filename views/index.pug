@@ -1,0 +1,170 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+    link(rel='stylesheet', href='./style.css')
+    title Spectral
+  body
+    .mainMenu
+      label(for='mainMenu__switcher') Menu
+        i.fa.fa-bars(aria-hidden='true')
+      input#mainMenu__switcher.menuBtn(type='checkbox')
+      .sidebar
+        label(for='mainMenu__switcher')
+          i.fa.fa-times.fa-2x.cross(aria-hidden='true')
+        ul.sidebar__list
+          li.sidebar__item
+            a.sidebar__link(href='#') home
+          li.sidebar__item
+            a.sidebar__link(href='#') generic
+          li.sidebar__item
+            a.sidebar__link(href='#') elements
+          li.sidebar__item
+            a.sidebar__link(href='#') sign up
+          li.sidebar__item
+            a.sidebar__link(href='#') log in
+    section.banner
+      h1.banner__head
+        | spectral
+      p.banner__info
+        | another fine responsive site template freebie crafted by 
+        a.link.link_white.link_dotted(href='#') html5 up
+      button.banner__button
+        | activate
+      a.banner__learnMore(href='#')
+        | learn more
+        br
+        i.fa.fa-arrow-down.fa-2x(aria-hidden='true')
+    section.service
+      .container.container_slim
+        h2.service__title
+          | Arcu aliquet vel lobortis ata nisl
+          | eget augue amet aliquet nisl cep donec
+        h2.service__info
+          | Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
+          | fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.
+        .service__shape
+          .square.icon_green
+            i.fa.fa-diamond.fa-rotate-45(aria-hidden='true')
+          .square.icon_blue
+            i.fa.fa-heart-o.fa-rotate-45(aria-hidden='true')
+          .square.icon_lightblue
+            i.fa.fa-code.fa-rotate-45(aria-hidden='true')
+    section.about
+      .row
+        .col-xs-12.col-md-4.col-lg-4.about__img_1
+        .col-xs-12.col-md-8.col-lg-8.about__info_1
+          .about__context
+            h2.context__title
+              | Magna primis lobortis
+              | sed ullamcorper
+            p.context__text
+              | Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+      row
+        .col-xs-12.col-md-8.col-lg-8.about__info_2
+          .about__context.about__context__center
+            h2.context__title
+              | Tortor dolore feugiat
+              | elementum magna
+            p.context__text
+              | Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+        .col-xs-12.col-md-4.col-lg-4.about__img_2
+      .row
+        .col-xs-12.col-md-4.col-lg-4.about__img_3
+        .col-xs-12.col-md-8.col-lg-8.about__info_3
+          .about__context
+            h2.context__title
+              | Magna primis lobortis
+              | sed ullamcorper
+            p.context__text
+              | Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+    section.portfolio
+      .container
+        .row
+          .col-lg-12
+            h2 Accumsan mus tortor nunc aliquet
+            hr.line
+            p.description.portfolio__description
+              | Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
+              | fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.
+        .features
+          .row
+            .col-lg-6.features__item
+              h2
+                i.fa.fa-paper-plane-o.fa-1x(aria-hidden='true')
+                | Arcu accumsan
+              p.description
+                | Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.
+            .col-lg-6.features__item
+              h2
+                i.fa.fa-laptop.fa-2x(aria-hidden='true')
+                | Ac Augue Eget
+              p.description
+                | Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.
+            .col-lg-6.features__item
+              h2
+                i.fa.fa-code.fa-2x(aria-hidden='true')
+                | Mus Scelerisque
+              p.description
+                | Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.
+            .col-lg-6.features__item
+              h2
+                i.fa.fa-headphones.fa-2x(aria-hidden='true')
+                | Mauris Imperdiet
+              p.description
+                | Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.
+            .col-lg-6.features__item
+              h2
+                i.fa.fa-heart-o.fa-2x(aria-hidden='true')
+                | Aenean Primis
+              p.description
+                | Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.
+            .col-lg-6.features__item
+              h2
+                i.fa.fa-flag-o.fa-2x(aria-hidden='true')
+                | Tortor Ut
+              p.description
+                | Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.
+    section.interactive
+      .interactive_banner
+        .interactive_container
+          .interactive_header
+            h2 Arcue ut vel commodo
+            p.interactive_text
+              | Aliquam ut ex ut augue consectetur interdum 
+              br
+              |  endrerit imperdiet amet eleifend fringilla.
+          .interactive_buttons
+            li
+              a.button.button_red(href='#') Activate
+            li
+              a.button.button_transparent(href='#') Learn more
+    footer.mainFooter
+      .container
+        ul.icons
+          li.icon
+            a(href='#')
+              i.fa.icon.fa-twitter(aria-hidden='true')
+          li.icon
+            a(href='#')
+              i.fa.icon.fa-facebook(aria-hidden='true')
+          li.icon
+            a(href='#')
+              i.fa.icon.fa-instagram(aria-hidden='true')
+          li.icon
+            a(href='#')
+              i.fa.icon.fa-dribbble(aria-hidden='true')
+          li.icon
+            a(href='#')
+              i.fa.icon.fa-envelope(aria-hidden='true')
+        .copyrights
+          ul.footer_copyrights
+            li.copyright
+              | © untitled
+            li.copyright
+              | Design : 
+              a.link.link_transparent(href='#') html5 up
+            li.copyright
+              | Demo images: 
+              a.link.link_transparent(href='#')  Unsplash
