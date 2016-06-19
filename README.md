@@ -1,3 +1,3 @@
 # Spectral
 
-~ https://html5up.net/spectral
+Ссылка на макет - (https://html5up.net/spectral)

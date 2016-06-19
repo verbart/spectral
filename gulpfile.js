@@ -12,7 +12,7 @@ const plumber = require('gulp-plumber');
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
 gulp.task('views', function buildHTML() {
-  return gulp.src('views/*.pug')
+  return gulp.src('views/**/!(_)*.pug')
     .pipe(plumber({
       errorHandler: notify.onError(function (err) {
         return {
