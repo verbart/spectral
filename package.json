@@ -13,6 +13,10 @@
     "gulp-stylus": "^2.4.0",
     "stylus": "^0.54.5"
   },
+  "scripts": {
+    "serve": "NODE_ENV=development ./node_modules/.bin/gulp",
+    "build": "NODE_ENV=production ./node_modules/.bin/gulp build"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/students-org/spectral.git"
