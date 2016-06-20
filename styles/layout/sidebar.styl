@@ -1,0 +1,51 @@
+input.mainMenu__switcher
+  display none
+  &:checked 
+    + .mainMenu
+      margin-right 0
+    + .mainMenu label.mainMenu__switcher
+      opacity 1
+
+label.mainMenu__switcher
+  display inline-block
+  position fixed
+  top 0
+  right 0
+  z-index 1000
+  color #fff
+  padding 15px
+  text-transform uppercase
+  cursor pointer
+  i
+    padding-left 10px
+    font-size 1.1rem
+    line-height 0
+
+.mainMenu
+  display block
+  position fixed
+  width 320px
+  margin-right -@width
+  transition .5s
+  right 0
+  top 0
+  bottom 0
+  z-index 1000
+  overflow auto
+  background #21B2A6
+  padding 3rem 2rem 1rem 2rem
+  label.mainMenu__switcher
+    opacity 0
+    transition .5s
+  &__item
+    text-transform uppercase
+    text-decoration none
+    font-size .8rem
+    letter-spacing 0.225rem
+    color #fff
+    display block
+    line-height: 1
+    margin-bottom 0.8em
+    padding-bottom 0.8em
+    &:not(:last-child)
+      border-bottom 1px solid rgba(black, .125)

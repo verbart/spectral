@@ -3,21 +3,19 @@
   text-transform uppercase
   text-decoration none
   color #fff
-  padding 15px 25px
-  width 250px
+  padding .8rem 2rem
   border-radius 3px
-  letter-spacing 5px
-  margin 20px
+  font-size .8rem
+  letter-spacing 0.225rem
   text-align center
   font-weight 500
-  font-size 16px
-  
-.button_red
-  background-color #ed4933
-  border 2px solid #ed4933
-  
-.button_transparent
-  background-color transparent
-  border 2px solid #fff
-  text-decoration none
-  
+  cursor pointer
+  border none
+  transition .6s
+  &_red
+    background #ed4933
+    &:hover
+      background lighten(@background, 10%)
+  &_transparent
+    background transparent
+    border 2px solid #fff
