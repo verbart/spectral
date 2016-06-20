@@ -1,43 +1,29 @@
 .about
+  background #2e3842
   color #fff
-.about__img_1
-  background url('./images/about_1.jpg') center / cover no-repeat
-  height 540px
-
-.about__info_1
-  background #2B343D
-  height 540px
-  display flex
-  justify-content center
-  align-items center
-
-.about__context
-  display flex
-  flex-direction column
-  justify-content space-around
-  align-items flex-start
-  flex-wrap: wrap
-
-.about__img_2
-  background url('./images/about_2.jpg') center / cover no-repeat
-  height 540px
-.about__info_2
-  background #273038
-  height 540px
-  display flex
-  justify-content flex-end
-  align-items center
-
-.about__img_3
-  background url('./images/about_3.jpg') center / cover no-repeat
-  height 540px
-
-.about__info_3
-  background #273038
-  height 540px
-  display flex
-  justify-content center
-  align-items center
-.context__title, .context__text
-  width 67%
-  height 40%
+  &Item
+    gradualDarkening(3)
+    display flex
+    align-items center
+    @media (max-width 980px)
+      display block
+    &:nth-child(2n)
+      flex-direction row-reverse
+    &__image
+      width 40%
+      img
+        width 100%
+        display block
+      @media (max-width 980px)
+        width 100%
+    &__info
+      width 60%
+      padding 1rem 4rem
+      @media (max-width 980px)
+        width 100%
+        padding 2rem 15px
+        text-align center
+    &__caption
+      font-size 1.1rem
+    &__description
+      margin 0

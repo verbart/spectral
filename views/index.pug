@@ -36,46 +36,21 @@ html(lang='en')
         | learn more
         br
         i.fa.fa-arrow-down.fa-2x(aria-hidden='true')
-    
-    include ./_service.pug
 
-    section.about
-      .row
-        .col-xs-12.col-md-4.col-lg-4.about__img_1
-        .col-xs-12.col-md-8.col-lg-8.about__info_1
-          .about__context
-            h2.context__title
-              | Magna primis lobortis
-              | sed ullamcorper
-            p.context__text
-              | Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
-      row
-        .col-xs-12.col-md-8.col-lg-8.about__info_2
-          .about__context.about__context__center
-            h2.context__title
-              | Tortor dolore feugiat
-              | elementum magna
-            p.context__text
-              | Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
-        .col-xs-12.col-md-4.col-lg-4.about__img_2
-      .row
-        .col-xs-12.col-md-4.col-lg-4.about__img_3
-        .col-xs-12.col-md-8.col-lg-8.about__info_3
-          .about__context
-            h2.context__title
-              | Magna primis lobortis
-              | sed ullamcorper
-            p.context__text
-              | Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.
+    include ./_service.pug
+    include ./_about.pug
+
     section.portfolio
       .container
-        .row
-          .col-lg-12
-            h2 Accumsan mus tortor nunc aliquet
-            hr.line
-            p.description.portfolio__description
-              | Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
-              | fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.
+        header.sectionHeader
+          h2.sectionHeader__caption.
+            Accumsan mus tortor nunc aliquet
+          hr.sectionHeader__delimeter
+          p.sectionHeader__description.
+            Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend
+            <br>
+            fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.
+
         .features
           .row
             .col-lg-6.features__item
