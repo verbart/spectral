@@ -1,0 +1,6 @@
+gradualDarkening(count = 7)
+  alpha = 0.075
+  for index in (1..count)
+    &:nth-child({index})
+      background rgba(black, alpha)
+    alpha += 0.075
