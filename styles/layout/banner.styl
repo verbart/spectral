@@ -1,12 +1,29 @@
 .banner
-  text-transform uppercase
+  display flex
+  flex-direction column
+  justify-content center
+  height 100vh
+  min-height 560px
+  padding-top 2rem
+  padding-bottom 2rem
+  position relative
   text-align center
-  padding 15% 38% 40px
-  color #fff
-  background-color rgba(0,0,0,.4)
+  &__caption
+    display inline-block
+    border-top 2px solid #fff
+    border-bottom 2px solid #fff
+    padding 1rem
+    font-size 1.75rem
+    margin-bottom 2rem
+  &__description
+    text-transform uppercase
+    color white
+    letter-spacing 0.225rem
+    margin-bottom 2rem
 
-.banner__head
+.linkToMore
   display inline-block
+<<<<<<< HEAD
   font-size 2.5rem
   border-top 2px solid #fff
   border-bottom 2px solid #fff
@@ -58,18 +75,19 @@
   background #21B2A6;
   right 500px
   top 0
+=======
+  width 180px
+  position absolute
+>>>>>>> rewrite
   bottom 0
-  position fixed
-  width 20%
-  display none
-
-.sidebar__list
-  list-style none
-
-.sidebar__link
-  text-transform uppercase
+  left 50%
+  padding 2rem
+  margin-left (@width / -2)
   text-decoration none
+  text-transform uppercase
+  font-size 0.8rem
   color #fff
+<<<<<<< HEAD
 
 .sidebar__item
   padding 1rem 0
@@ -90,3 +108,5 @@
   top 0
   left 0
   bottom 0
+=======
+>>>>>>> rewrite
