@@ -1,14 +1,13 @@
 section.interactive
-  .interactive_banner
-    .interactive_container
-      .interactive_header
-        h2 Arcue ut vel commodo
-        p.interactive_text
-          | Aliquam ut ex ut augue consectetur interdum 
-          br
-          |  endrerit imperdiet amet eleifend fringilla.
-      .interactive_buttons
-        li
-          a.button.button_red(href='#') Activate
-        li
-          a.button.button_transparent(href='#') Learn more
+  .container
+    .row
+      .col-sm-7
+        h2.interactive__caption Arcue ut vel commodo
+        p.interactive__description.
+          Aliquam ut ex ut augue consectetur interdum
+          endrerit imperdiet amet eleifend fringilla.
+      .col-sm-5
+        .interactive__button
+          button.button.button_red.button_block(href='#') Activate
+        .interactive__button
+          button.button.button_transparent.button_block(href='#') Learn more
