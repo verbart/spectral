@@ -1,25 +1,25 @@
-.interactive 
+.interactive
+  padding-top 4rem
+  padding-bottom 4rem
   color #fff
   font-size 18px
   letter-spacing 2px
+  display flex
+  align-items center
+  .container
+    max-width 900px
 
-.interactive_banner
-  background-color rgba(0,0,0,0.4)
-  padding 100px 0 125px
+  &__description
+    margin-bottom 0
+    font-size .9rem
+    @media (max-width 768px)
+      margin-bottom 2rem
+  &__button
+    max-width 300px
+    margin-right auto
+    margin-left auto
+    &:not(:last-child)
+      margin-bottom 2rem
 
-.interactive_container
-  max-width 900px
-  margin 0 auto
-
-.interactive_buttons
-  width 30%
-  list-style-type none
-  display inline-block
-  
-.interactive_header
-  float left
-  width 65%
-  padding 10px
-
-.interactive_text
-  line-height 35px
+  @media (max-width 768px)
+    text-align center
