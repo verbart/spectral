@@ -1,10 +1,22 @@
+.mainVail
+  z-index -999
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  transition background .5s ease-in-out
+
 input.mainMenu__switcher
   display none
-  &:checked 
-    + .mainMenu
-      margin-right 0
-    + .mainMenu label.mainMenu__switcher
-      opacity 1
+  &:checked
+    ~ .mainVail
+      z-index 999
+      background rgba(#011101, .75)
+    ~ .mainMenu
+        margin-right 0
+        label.mainMenu__switcher
+          opacity 1
 
 label.mainMenu__switcher
   display inline-block
