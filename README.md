@@ -12,4 +12,3 @@
 ### Build
 
 * Run `npm run build` or `gulp build` for building.
-# strata
