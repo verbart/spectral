@@ -1,16 +1,11 @@
 .link
   text-decoration none
-  transition .4s
-  &_white
-    color #fff
-  &_grey
-    color grey
+  display inline-block
+  transition .3s
+  color inherit
   &_dotted
-    border-bottom 1px dotted #fff
+    border-bottom 1px dotted
     &:hover
-      border-bottom 1px dotted rgba(white, 0)
-  &_transparent
-    color rgba(255, 255, 255, 0.5)
-    border-bottom 1px dotted rgba(255, 255, 255, 0.5)
-    &:hover
-      color white
+      border-bottom-color transparent
+  &_uppercase
+    text-transform uppercase

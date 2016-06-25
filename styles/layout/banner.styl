@@ -3,7 +3,7 @@
   flex-direction column
   justify-content center
   height 100vh
-  min-height 560px
+  min-height 480px
   padding-top 2rem
   padding-bottom 2rem
   position relative
@@ -20,6 +20,9 @@
     color white
     letter-spacing 0.225rem
     margin-bottom 2rem
+    br
+      @media (max-width 480px)
+        display none
 
 .linkToMore
   position absolute
@@ -36,3 +39,5 @@
   display inline-block
   i
     padding-top 1rem
+  @media (max-width 480px)
+    display none

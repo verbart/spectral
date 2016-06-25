@@ -1,33 +1,34 @@
-footer
-  background-color: rgba(29, 36, 42, 0.9)
-  padding 104px 0 79px
-  
-.icons, .copyrights
-  display block
+.mainFooter
+  background rgba(29, 36, 42, 0.9)
+  padding 5rem 1rem
+  position relative
   text-align center
-  color rgba(255, 255, 255, 0.5)
-  font-size 25px
-  margin 0 0 40px
+  color rgba(white, 0.5)
 
-.icon
-  margin 8px
-  display inline-block
-  color rgba(255, 255, 255, 0.5)
-  
-.icon:hover
-  color white
+.socialLinks
+  &__item
+    text-decoration none
+    font-size 1.2rem
+    color rgba(white, 0.5)
+    padding .5rem
+    margin 0 0.5rem
+    transition 0.3s
+    &:hover
+      color white
 
 .copyrights
-  text-transform uppercase
-  letter-spacing 3px
-  font-size 17px
-  font-weight 400
-  
-.copyright
-  display inline-block
-  border-right 1px solid rgba(255, 255, 255, 0.5)
-  line-height 16px
-  padding 0 20px
-  
-.copyright:last-child 
-  border-right none
+  display block
+  font-size .85rem
+  letter-spacing 0.125rem
+  padding-top 1.8rem
+  &__item
+    display inline-block
+    text-transform uppercase
+    padding 0 0.75rem
+    margin-top .5rem
+    line-height 1rem
+    &:not(:last-child)
+      @media (min-width 768px)
+        border-right 1px solid rgba(white, 0.4)
+    @media (max-width 768px)
+      display block
