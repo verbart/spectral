@@ -1,6 +1,6 @@
-section.banner.container-fluid
-  section
-    h1.banner__caption Spectral
+section(block='banner' mix='block:container-fluid')
+  section(elem='content')
+    h1(elem='caption') Spectral
 
     p.banner__description
       | Another fine responsive
@@ -12,5 +12,4 @@ section.banner.container-fluid
 
     button.button.button_red Activate
 
-  a.linkToMore(href='#') Learn more
-    i.fa.fa-arrow-down.fa-2x(aria-hidden='true')
+  include ../link-to-more/link-to-more.pug

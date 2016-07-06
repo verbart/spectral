@@ -2,14 +2,17 @@ const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const stylus = require('gulp-stylus');
 const pug = require('gulp-pug');
-const resolver = require('stylus').resolver;
+const posthtml = require('gulp-posthtml');
+const posthtmlBEM =  require('posthtml-bem');
 const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const gulpIf = require('gulp-if');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
-const debug = require('gulp-debug');
 const del = require('del');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
@@ -26,6 +29,13 @@ gulp.task('views', function () {
     .pipe(pug({
       pretty: isDevelopment
     }))
+    .pipe(posthtml([
+      posthtmlBEM({
+        elemPrefix: '__',
+        modPrefix: '_',
+        modDlmtr: '_'
+      })
+    ]))
     .pipe(gulp.dest('./public'));
 });
 
@@ -39,13 +49,14 @@ gulp.task('styles', function () {
       })
     }))
     .pipe(gulpIf(isDevelopment, sourcemaps.init()))
-      .pipe(stylus({
-        'include-css': true,
-        define: {
-          url: resolver()
-        }
-      }))
+    .pipe(stylus())
+    .pipe(postcss([
+      autoprefixer({
+        browsers: ['> 5%', 'ff > 14']
+      })
+    ]))
     .pipe(gulpIf(isDevelopment, sourcemaps.write('./')))
+    .pipe(gulpIf(!isDevelopment, cleanCSS()))
     .pipe(gulp.dest('./public'));
 });
 
@@ -58,8 +69,8 @@ gulp.task('images', function () {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./{blocks,pages}/**/*.pug', ['views']);
-  gulp.watch('./{blocks,pages}/**/*.styl', ['styles']);
+  gulp.watch('./{blocks,pages}/**/*.pug', gulp.series('views'));
+  gulp.watch('./{blocks,pages}/**/*.styl', gulp.series('styles'));
 });
 
 gulp.task('serve', function () {
@@ -68,23 +79,25 @@ gulp.task('serve', function () {
     port: 8080
   });
 
-  browserSync.watch('./public/**/*.html').on('change', browserSync.reload);
-  browserSync.watch('./public/**/*.css').on('change', browserSync.reload);
+  browserSync.watch('./**/*.html').on('change', browserSync.reload);
+  browserSync.watch('./**/*.css').on('change', browserSync.reload);
 });
 
 gulp.task('clean', function () {
-  del('./public')
+  return del('./public')
 });
 
-gulp.task('build', [
+gulp.task('build', gulp.series(
   'clean',
-  'images',
-  'views',
-  'styles'
-]);
+  gulp.parallel(
+    'images',
+    'views',
+    'styles'
+)));
 
-gulp.task('default', [
+gulp.task('default', gulp.series(
   'build',
-  'watch',
-  'serve'
-]);
+  gulp.parallel(
+    'watch',
+    'serve'
+)));
