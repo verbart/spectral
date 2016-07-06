@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic');
+
+.page
+  *
+    box-sizing border-box
+  font 13pt/1.5 'Source Sans Pro', sans-serif
+  margin 0
+  background -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/banner.jpg') no-repeat center / cover fixed
+  background -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/banner.jpg') no-repeat center / cover fixed
+  background linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/banner.jpg') no-repeat center / cover fixed
+
+  h1, h2, h3
+    line-height 1.75rem
+    font-weight 800
+    font-family 'Source Sans Pro', sans-serif
+    letter-spacing: 0.225em
+    color #fff
+    text-transform uppercase
+    margin 0 0 1rem 0
+
+  h2
+    font-size 1.35rem
+    @media (max-width 768px)
+      font-size 1.2rem
+
+  h3
+    font-size 1.15rem
+    @media (max-width 768px)
+      font-size 1.10rem
+
+  a, button
+    outline none !important
+
+  ul
+    margin 0
+    padding 0

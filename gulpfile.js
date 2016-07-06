@@ -8,11 +8,14 @@ const browserSync = require('browser-sync').create();
 const gulpIf = require('gulp-if');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
+const debug = require('gulp-debug');
+const del = require('del');
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
-gulp.task('views', function buildHTML() {
-  return gulp.src('views/**/!(_)*.pug')
+
+gulp.task('views', function () {
+  return gulp.src('pages/**/*.pug')
     .pipe(plumber({
       errorHandler: notify.onError(function (err) {
         return {
@@ -23,11 +26,11 @@ gulp.task('views', function buildHTML() {
     .pipe(pug({
       pretty: isDevelopment
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./public'));
 });
 
 gulp.task('styles', function () {
-  return gulp.src('./styles/main.styl')
+  return gulp.src('./pages/**/*.styl')
     .pipe(plumber({
       errorHandler: notify.onError(function (err) {
         return {
@@ -42,27 +45,40 @@ gulp.task('styles', function () {
           url: resolver()
         }
       }))
-    .pipe(gulpIf(isDevelopment, sourcemaps.write()))
-    .pipe(rename('style.css'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulpIf(isDevelopment, sourcemaps.write('./')))
+    .pipe(gulp.dest('./public'));
+});
+
+gulp.task('images', function () {
+  return gulp.src('./blocks/**/*.{png,jpg,gif,svg}')
+    .pipe(rename(function (path) {
+      path.dirname = '';
+    }))
+    .pipe(gulp.dest('./public/images'));
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./views/**/*.pug', ['views']);
-  gulp.watch('./styles/**/*.styl', ['styles']);
+  gulp.watch('./{blocks,pages}/**/*.pug', ['views']);
+  gulp.watch('./{blocks,pages}/**/*.styl', ['styles']);
 });
 
 gulp.task('serve', function () {
   browserSync.init({
-    server: './',
+    server: './public',
     port: 8080
   });
 
-  browserSync.watch('./*.html').on('change', browserSync.reload);
-  browserSync.watch('./style.css').on('change', browserSync.reload);
+  browserSync.watch('./public/**/*.html').on('change', browserSync.reload);
+  browserSync.watch('./public/**/*.css').on('change', browserSync.reload);
+});
+
+gulp.task('clean', function () {
+  del('./public')
 });
 
 gulp.task('build', [
+  'clean',
+  'images',
   'views',
   'styles'
 ]);

@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "devDependencies": {
     "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
     "gulp": "^3.9.1",
     "gulp-if": "^2.0.1",
     "gulp-notify": "^2.2.0",
