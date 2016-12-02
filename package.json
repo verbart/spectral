@@ -1,6 +1,19 @@
 {
   "name": "spectral",
   "version": "0.0.1",
+  "author": "Artem Verbat",
+  "homepage": "https://github.com/verbart/spectral#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/verbart/spectral.git"
+  },
+  "bugs": {
+    "url": "https://github.com/verbart/spectral/issues"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development ./node_modules/.bin/gulp",
+    "build": "NODE_ENV=production ./node_modules/.bin/gulp build"
+  },
   "devDependencies": {
     "autoprefixer": "^6.3.7",
     "browser-sync": "^2.13.0",
@@ -18,16 +31,7 @@
     "gulp-stylus": "^2.4.0",
     "posthtml-bem": "^0.2.2"
   },
-  "scripts": {
-    "serve": "NODE_ENV=development ./node_modules/.bin/gulp",
-    "build": "NODE_ENV=production ./node_modules/.bin/gulp build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/students-org/spectral.git"
-  },
-  "bugs": {
-    "url": "https://github.com/students-org/spectral/issues"
-  },
-  "homepage": "https://github.com/students-org/spectral#readme"
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  }
 }
